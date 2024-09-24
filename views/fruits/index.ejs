@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruits Index</title>
+  </head>
+  <body>
+    <!-- views/fruits/index.ejs -->
+    <a href="/fruits/new">Add New Fruit</a>
+
+    <h1><%= title %></h1>
+    <ul>
+      <% allFruits.forEach(fruit => { %>
+        <li>
+            <%= fruit.name %> - <%= fruit.color %>
+            <%= fruit.isReadyToEat === true ? 'is' : 'is not' %> ready to eat, and
+            <%= fruit.doYouLike === true ? 'you do like it' : 'you don\'t like it' %>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
