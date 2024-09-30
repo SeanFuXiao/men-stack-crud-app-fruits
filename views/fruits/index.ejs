@@ -8,15 +8,16 @@
   <body>
     <!-- views/fruits/index.ejs -->
     <a href="/fruits/new">Add New Fruit</a>
-
     <h1><%= title %></h1>
     <ul>
       <% allFruits.forEach(fruit => { %>
-        <li>
-            <%= fruit.name %> - <%= fruit.color %>
-            <%= fruit.isReadyToEat === true ? 'is' : 'is not' %> ready to eat, and
-            <%= fruit.doYouLike === true ? 'you do like it' : 'you don\'t like it' %>
-        </li>
+      <li>
+        <a href="/fruits/<%= fruit._id %>">
+          <%= fruit.name %> - <%= fruit.color %> <%= fruit.isReadyToEat === true
+          ? 'is' : 'is not' %> ready to eat
+        </a>
+      </li>
+
       <% }) %>
     </ul>
   </body>

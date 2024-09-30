@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creste a Fruit</title>
+    <title>Create a Fruit</title>
   </head>
   <body>
     <!-- views/fruits/new.ejs -->
     <a href="/fruits/">Back to Fruits</a>
-
     <h1>Create a New Fruit!</h1>
-
     <form action="/fruits" method="POST">
       <label for="name">Name:</label>
       <input type="text" name="name" id="name" />
@@ -21,8 +19,8 @@
       <label for="isReadyToEat">Ready to Eat?</label>
       <input type="checkbox" name="isReadyToEat" id="isReadyToEat" />
 
-      <label for="doYouLike">Do you like it?</label>
-      <input type="checkbox" name="doYouLike" id="doYouLike" />
+      <label for="secondaryColor">Secondary Color:</label>
+      <input type="text" name="secondaryColor" id="secondaryColor" />
 
       <button type="submit">Add New Fruit</button>
     </form>
